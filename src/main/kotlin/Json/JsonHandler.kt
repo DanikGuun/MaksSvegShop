@@ -1,0 +1,4 @@
+package Json
+
+class JsonHandler() {
+}
