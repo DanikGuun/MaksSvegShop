@@ -9,20 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 class Bot(val controller: Controller): TelegramLongPollingBot(){
     override fun onUpdateReceived(update: Update) {
-        if(update.callbackQuery != null){
-            sendMessage(update.callbackQuery.from.id.toString(), update.callbackQuery.data)
-        }
-        else {
-            val list = createButtonsRowList(
-                arrayListOf(
-                    arrayListOf(
-                        arrayListOf("Стёпа лох", "Степа не лох"),
-                        arrayListOf("Данила лох", "бля")
-                    )
-                )
-            )
-            sendMessage(update.message.chatId.toString(), "степа гей", list)
-        }
+        
     }
 
     fun sendMessage(chatID: String, text: String, buttons: ArrayList<List<InlineKeyboardButton>>? = null){
