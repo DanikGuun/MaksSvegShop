@@ -9,7 +9,6 @@ fun main(args: Array<String>) {
     val jsonHandler = JsonHandler()
     val yMoneyHandler = YMoneyHandler()
     val controller = Controller(yMoneyHandler, jsonHandler)
-
     val bot = Bot(controller)
 
     val botAPI = TelegramBotsApi(DefaultBotSession::class.java)
